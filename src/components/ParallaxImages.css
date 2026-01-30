@@ -1,0 +1,58 @@
+.parallax-images-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.parallax-image-wrapper {
+  position: fixed;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  will-change: transform;
+}
+
+.parallax-image-wrapper:hover {
+  opacity: 0.6;
+}
+
+.parallax-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: blur(1px) saturate(1.2);
+  mix-blend-mode: multiply;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .parallax-image-wrapper {
+  opacity: 0.3;
+}
+
+[data-theme="dark"] .parallax-image {
+  filter: blur(1px) saturate(1.2) brightness(0.7);
+  mix-blend-mode: screen;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .parallax-image-wrapper {
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-image-wrapper {
+    opacity: 0.3;
+  }
+  
+  .parallax-image {
+    filter: blur(1px);
+  }
+}

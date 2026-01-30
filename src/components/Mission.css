@@ -1,0 +1,42 @@
+.mission {
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--color-gray-light);
+}
+
+.mission-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-md);
+  text-align: left;
+}
+
+.mission-text:last-child {
+  margin-bottom: 0;
+}
+
+.mission-text strong {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .mission {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .mission-text {
+    font-size: 1.125rem;
+  }
+}
